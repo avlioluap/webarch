@@ -10,8 +10,10 @@ html, body {height: 100%}
 	min-height: 100%;
 }
 
-#menuleft { float:left; background-repeat: no-repeat; background-color: #22262e; width: 250px; height: 100%; color: #fff; }	
+#menuleft { float:left; background-repeat: no-repeat; background-color: #22262e; width: 250px; height: 100%; color: #fff; height: 100%; overflow: hidden;}	
 	#menulefttop { height: 60px; line-height: 60px;}
+	#menuleftcontent { background-color: #0882B8; height: 100%; min-height:250px; margin-bottom: -120px; }
+	#menuleftbottom { height: 60px; bottom: 0; background-color: #22262e;}
 
 #content { overflow:hidden; background-color: #f4f4f4;	height: 100%; }
 	#contenttop { height: 60px; line-height: 60px; overflow:hidden; background-color: #fff; }
@@ -19,8 +21,9 @@ html, body {height: 100%}
 
 #menuright { float:right; background-repeat: no-repeat; background-color: #22262e; width: 250px; height: 100%; color: #fff; margin-top: -60px; }
 	#menurighttop { height: 60px; line-height: 60px;}
+	
 /* media queries */
-@media (max-width: 800px) {
+@media (max-width: 1045px) {
 
 
 	#menuleft { width: 70px; }
@@ -28,4 +31,11 @@ html, body {height: 100%}
 	
 }
 	
+/* media queries */
+@media (max-width: 777px) {
+
+
+	#menuleft { width: 70px; }
+	#content {  }
 	
+}	
