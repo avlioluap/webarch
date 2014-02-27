@@ -15,7 +15,6 @@
 		<link rel='stylesheet' id='style-css'  href='css/layout.css' type='text/css' media='all' />	
 		
 		<script src="http://code.jquery.com/jquery-latest.min.js"type="text/javascript"></script>
-	
 
 
 </head>
@@ -27,24 +26,16 @@
 		<div id="menuleft">
 			
 			<div id="menulefttop">
-				menu esq
+				<img src="img/logo.png" />
 			</div>
 			
-			<div id="menuleftcontent">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam sem, imperdiet at mollis vestibulum, bibendum id purus. Aliquam molestie, leo sed molestie condimentum, massa enim lobortis massa, in vulputate diam lorem quis justo. Nullam nec dignissim mi. In non varius nibh. Proin et eros nisi, eu vulputate libero. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis ultricies augue id risus dapibus blandit.</p>
-			</div>
-			
-			<div id="menuleftbottom">
-				menu esq bottom
-			</div>
 		</div>
 		
 		<!-- conteudo meio -->
 		<div id="content">
 			
 			<div id="contenttop">
-
-				<a id="showchat"><img src="img/chat_ic.png" width="30" height="30" /></a>
+				<a id="showhidetrigger">show/hide</a>
 			</div>
 			
 			<!-- menu direita -->	
@@ -65,16 +56,20 @@
 	<script type="text/javascript">
         $(document).ready(function () {
             $('#menuright').hide();
+			$('#menuleft').show();
  
 			
-		   $('a#showchat').click(function () {                
-				$('#menuright').animate({width: 'toggle'});
-				$('#menuleft').animate({width: 'toggle'});	
-            });	
-
-			
+		   $('a#showhidetrigger').click(function () {
+                $('#menuright').animate({width: 'toggle'});
+				$('#menuleft').animate({width: 'toggle'});
+            });
         });
-			
+		
+		/*$(window).resize(function(){
+		  $('.contenttop').each(function(){
+			$(this).css('width', $(this).parent().width()-250);
+		  })
+		});	*/	
     </script>
 	
 </body>
