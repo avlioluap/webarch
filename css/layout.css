@@ -1,0 +1,31 @@
+/*------------------------------*/
+/* - Index 						*/
+/*------------------------------*/
+@import url(http://reset5.googlecode.com/hg/reset.min.css);
+
+html, body {height: 100%}
+.clear { clear: both;}
+#main {
+	height: 100%;
+	min-height: 100%;
+}
+
+#menuleft { float:left; background-repeat: no-repeat; background-color: #22262e; width: 250px; height: 100%; color: #fff; }	
+	#menulefttop { height: 60px; line-height: 60px;}
+
+#content { overflow:hidden; background-color: #f4f4f4;	height: 100%; }
+	#contenttop { height: 60px; line-height: 60px; overflow:hidden; background-color: #fff; }
+	
+
+#menuright { float:right; background-repeat: no-repeat; background-color: #22262e; width: 250px; height: 100%; color: #fff; margin-top: -60px; }
+	#menurighttop { height: 60px; line-height: 60px;}
+/* media queries */
+@media (max-width: 800px) {
+
+
+	#menuleft { width: 70px; }
+	#content {  }
+	
+}
+	
+	
