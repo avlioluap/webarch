@@ -22,58 +22,49 @@
 
 <body>
 
-	<div id="main">
-		<!-- menu equerda -->
-		<div id="menuleft">
-			
-			<div id="menulefttop">
-				menu esq
-			</div>
-			
-			<div id="menuleftcontent">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam sem, imperdiet at mollis vestibulum, bibendum id purus. Aliquam molestie, leo sed molestie condimentum, massa enim lobortis massa, in vulputate diam lorem quis justo. Nullam nec dignissim mi. In non varius nibh. Proin et eros nisi, eu vulputate libero. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis ultricies augue id risus dapibus blandit.</p>
-			</div>
-			
-			<div id="menuleftbottom">
-				menu esq bottom
-			</div>
-		</div>
-		
-		<!-- conteudo meio -->
-		<div id="content">
-			
-			<div id="contenttop">
+<div id="header"><a id="showchat"><img src="img/chat_ic.png" width="30" height="30" /></a></div>
+<div id="wrapper">
 
-				<a id="showchat"><img src="img/chat_ic.png" width="30" height="30" /></a>
-			</div>
-			
-			<!-- menu direita -->	
-			<div id="menuright">
-				<div id="menurighttop">
-					menu dir
-				</div>
-			</div>
-			
-			
-			
-			<div class="clear"></div>	
-		</div>
+<div id="div1">1</div>
+<div id="div2">2</div>
+<div id="div3">3</div>
+	
+</div>	
 	
 
+			
+			
 
     
 	<script type="text/javascript">
         $(document).ready(function () {
-            $('#menuright').hide();
- 
+            
+ 			
+			var one = $('#div1').width();
+			var two = $('#div3').width(); 
+			var remaining_width = parseInt($(window).width() - one);
 			
+			$('#div2').css('width', remaining_width);
+			$('#div3').hide();
+			   
+		   
+		   
+		   
 		   $('a#showchat').click(function () {                
-				$('#menuright').animate({width: 'toggle'});
-				$('#menuleft').animate({width: 'toggle'});	
+				$('#div1').animate({width: 'toggle'});
+				$('#div3').animate({width: 'toggle'});	
+					var remaining_width = parseInt($(window).width() - two);
+
+					$('#div2').css('width', remaining_width);
             });	
 
+
+
+	
 			
         });
+		
+
 			
     </script>
 	
