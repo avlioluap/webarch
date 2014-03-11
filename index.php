@@ -14,7 +14,7 @@
 		<link rel="shortcut icon" href="" type="image/png">		
 		<link rel='stylesheet' id='style-css'  href='css/layout.css' type='text/css' media='all' />	
 		
-		<script src="http://code.jquery.com/jquery-git.js"type="text/javascript"></script>
+		<script src="http://code.jquery.com/jquery-git.js" type="text/javascript"></script>
 	
 
 
@@ -25,14 +25,22 @@
 	
 	<div id="wrapper_content">
 
-		<div id="div1">
-			<ul>
-				<li><a href="#" id="showmenu"><img src="img/menu_ic.png" width="30" height="30" /></a></li>
-				<li><a href="#" id="showchat"><img src="img/chat_ic.png" width="30" height="30" /></a></li>		
-			</ul>		
+		<div id="header">
+			<div id="logo">logo</div>
+			<div id="header_menu">
+				<ul id="header_menu_left">
+					<li><a href="#" id="showmenu"><img src="img/menu_ic.png" width="30" height="30" /></a></li>	
+				</ul>
+				<ul id="header_menu_rigth">
+					<li><a href="#" id="showchat"><img src="img/chat_ic.png" width="30" height="30" /></a></li>		
+				</ul>				
+			</div>		
 		</div>
 		
-		<div id="div2">menu l</div>
+		<div id="contentwrapper">
+			<div id="menuleft">links</div>
+			<div id="content">conteudo</div>
+		</div>
 		
 		<div class="clear"></div>
 		
@@ -48,26 +56,53 @@
     
 	<script type="text/javascript">
 	
+		
+	
+	function mySetupFunction() {
+		
 		var remaining_width = parseInt($(window).width());
 		var one = $('#wrapper_content').width();
 		var two = $('#menurigth').width();
-	
-	function mySetupFunction() {
+		var three = $('#menuleft').width();	
+		
 		$('#menurigth').hide();
-		$('#div1').css('width', remaining_width);
+		$('#menuleft').show();
+		$('a#hidechat').attr('id', 'showchat')			
+		$('#wrapper_content').css('width', remaining_width);
+		$('#content').css('width', remaining_width - three);
+		
 	}
 		
 	$(document).ready(function () {
+	
+
+		
 		$(document).on('click', 'a#showchat', function () {
+		var remaining_width = parseInt($(window).width());
+		var one = $('#wrapper_content').width();
+		var two = $('#menurigth').width();
+		var three = $('#menuleft').width();	
+		
 			$('#menurigth').animate({ width: 'toggle' });
-			$('#div1').css('width', remaining_width - two);
-			$('a#showchat').attr('id', 'hidechat')
+			$('#menuleft').hide();
+			$('#wrapper_content').css('width', remaining_width - two);
+			$('#content').css('width', remaining_width - two);
+			$('a#showchat').attr('id', 'hidechat');
+			
 		});
 
 		$(document).on('click', 'a#hidechat', function () {
+		var remaining_width = parseInt($(window).width());
+		var one = $('#wrapper_content').width();
+		var two = $('#menurigth').width();
+		var three = $('#menuleft').width();			
+		
 			$('#menurigth').animate({ width: 'toggle' });
-			$('#div1').css('width', remaining_width);
-			$('a#hidechat').attr('id', 'showchat')
+			$('#menuleft').animate({ width: 'toggle' });
+			$('#wrapper_content').css('width', remaining_width);
+			$('#content').css('width', remaining_width - three);
+			$('a#hidechat').attr('id', 'showchat');
+			
 		});
 		mySetupFunction();
 	});
