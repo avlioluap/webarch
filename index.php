@@ -29,10 +29,14 @@
 			<div id="logo">logo</div>
 			<div id="header_menu">
 				<ul id="header_menu_left">
-					<li><a href="#" id="showmenu"><img src="img/menu_ic.png" width="30" height="30" /></a></li>	
+					<li>links</li>
+					<li>links</li>
+					<li>links</li>
 				</ul>
 				<ul id="header_menu_rigth">
-					<li><a href="#" id="showchat"><img src="img/chat_ic.png" width="30" height="30" /></a></li>		
+					<li><a href="#" id="showchat"></a></li>				
+					<li>links</li>
+					<li>links</li>					
 				</ul>				
 			</div>		
 		</div>
@@ -54,10 +58,7 @@
 			
 
     
-	<script type="text/javascript">
-	
-		
-	
+	<script type="text/javascript">	
 	function mySetupFunction() {
 		
 		var remaining_width = parseInt($(window).width());
@@ -67,17 +68,24 @@
 		
 		$('#menurigth').hide();
 		$('#menuleft').show();
+		if (window.innerWidth < 1045)
+		{
+			$('#logo').hide();
+		}
+		if (window.innerWidth > 1045)
+		{
+			$('#logo').show();
+		}		
 		$('a#hidechat').attr('id', 'showchat')			
 		$('#wrapper_content').css('width', remaining_width);
 		$('#content').css('width', remaining_width - three);
 		
 	}
 		
-	$(document).ready(function () {
-	
-
+	$(document).ready(function () {	
 		
 		$(document).on('click', 'a#showchat', function () {
+		
 		var remaining_width = parseInt($(window).width());
 		var one = $('#wrapper_content').width();
 		var two = $('#menurigth').width();
@@ -85,6 +93,8 @@
 		
 			$('#menurigth').animate({ width: 'toggle' });
 			$('#menuleft').hide();
+			$('#logo').hide();
+			
 			$('#wrapper_content').css('width', remaining_width - two);
 			$('#content').css('width', remaining_width - two);
 			$('a#showchat').attr('id', 'hidechat');
@@ -92,6 +102,7 @@
 		});
 
 		$(document).on('click', 'a#hidechat', function () {
+		
 		var remaining_width = parseInt($(window).width());
 		var one = $('#wrapper_content').width();
 		var two = $('#menurigth').width();
@@ -99,6 +110,11 @@
 		
 			$('#menurigth').animate({ width: 'toggle' });
 			$('#menuleft').animate({ width: 'toggle' });
+			if (window.innerWidth > 1045)
+			{
+				$('#logo').animate({ width: 'toggle' });
+			}
+			
 			$('#wrapper_content').css('width', remaining_width);
 			$('#content').css('width', remaining_width - three);
 			$('a#hidechat').attr('id', 'showchat');
@@ -107,15 +123,7 @@
 		mySetupFunction();
 	});
 
-	$(window).resize(function () { mySetupFunction(); });
-	
-	
-
-
-
-		
-
-			
+	$(window).resize(function () { mySetupFunction(); });		
     </script>
 	
 </body>

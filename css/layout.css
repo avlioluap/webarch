@@ -6,35 +6,35 @@
 html, body {height: 100%; min-height: 100%; overflow:hidden; }
 .clear { clear: both;}
 
-/*#header { height: 60px; line-height: 60px; background-color: #fff;}
-	#header ul li {float:left; display: block; list-style-type: none; width:50px; height: 50px;}*/
-
 #wrapper_content { float:left; height:100%; }
 
 #header{ height: 60px; line-height: 60px; background:#ffffff;  }
-	#header_menu_left ul li { float:left; display: block; list-style-type: none; }
-	#header_menu_rigth ul li {}
+	#logo { float:left; width: 250px; background:red; }
+	#header_menu_left  li { float:left; list-style-type: none; line-height: 60px; }
+	#header_menu_rigth  li { float: right; list-style-type: none; line-height: 60px; }
+		#showchat { display:table-cell; width: 47px;  height: 37px; background: url('../img/chat_ic.png');  }
+		#hidechat { display:table-cell; width: 47px;  height: 37px; background: url('../img/menu_ic.png');  }
 
 #contentwrapper{ float:left; height: 100%; width: 100%; overflow: hidden; }
 	#menuleft { background: blue; width: 250px; float: left; height: 100%; }
 	#content { background: green; float: left; height: 100%;}
 
-#menurigth { float:right;width: 250px;background:red;height:100%; }	
+#menurigth { float:right; width: 250px; background:red; height:100%; }	
 
 
 /* media queries */
-@media (max-width: 1045px) {
+@media screen and (max-width: 1045px) {
 
-
+	#logo { display: none;}
 	#menuleft  { width: 70px; }
 	
 	
 }
 	
 /* media queries */
-@media (max-width: 777px) {
+@media screen and (max-width: 777px) {
 
-
+	#logo { display: none;}
 	#menuleft { width: 70px; }
 	
 	
