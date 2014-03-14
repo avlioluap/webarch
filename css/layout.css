@@ -9,24 +9,29 @@ html, body {height: 100%; min-height: 100%; overflow:hidden; }
 #wrapper_content { float:left; height:100%; }
 
 #header{ height: 60px; line-height: 60px; background:#ffffff;  }
-	#logo { float:left; width: 250px; background:red; }
+	#logo { float:left; width: 250px; height: 60px; background:#22262E; color: #fff;  }
+		.logotipo { float: left; display: block; height:60px; width: 180px; background: url('../img/logo.png') no-repeat; background-position:center;}
+		#logo ul { float: left; width: 70px; }
+			#logo ul li { float: left; list-style-type: none; width: 35px; height: 60px; }
+				#logo ul li a { line-height: 60px;}
+	
 	#header_menu_left  li { float:left; list-style-type: none; line-height: 60px; }
 	#header_menu_rigth  li { float: right; list-style-type: none; line-height: 60px; }
-		#showchat { display:table-cell; width: 47px;  height: 37px; background: url('../img/chat_ic.png');  }
-		#hidechat { display:table-cell; width: 47px;  height: 37px; background: url('../img/menu_ic.png');  }
+		#showchat { display:table-cell; width: 30px;  height: 30px; background: url('../img/chat_ic.png');  }
+		#hidechat { display:table-cell; width: 30px;  height: 30px; background: url('../img/menu_ic.png');  }
 
 #contentwrapper{ float:left; height: 100%; width: 100%; overflow: hidden; }
-	#menuleft { background: blue; width: 250px; float: left; height: 100%; }
-	#content { background: green; float: left; height: 100%;}
+	#menuleft { background: #1B1E24; width: 250px; float: left; height: 100%; }
+	#content { background: #E5E9EC; float: left; height: 100%;}
 
-#menurigth { float:right; width: 250px; background:red; height:100%; }	
+#menurigth { float:right; width: 250px; background:#22262E; height:100%; }	
 
 
 /* media queries */
 @media screen and (max-width: 1045px) {
 
 	#logo { display: none;}
-	#menuleft  { width: 70px; }
+	#menuleft  { width: 70px; background: #0AA699; }
 	
 	
 }
