@@ -1,31 +1,70 @@
 /*------------------------------*/
 /* - Index 						*/
+/* - 1 - header					*/
+/* -- 1.1 - header logo			*/
+/* -- 1.2 header barra			*/
+/* - 2 content					*/
+/* -- 2.1 menu esq				*/
+/* -- 2.2 conteudo				*/
+/* - 3 menu direito				*/
+/* - media queries				*/
 /*------------------------------*/
-@import url(http://reset5.googlecode.com/hg/reset.min.css);
+	
+/* -- other -- */	
+	@import url(http://reset5.googlecode.com/hg/reset.min.css);
 
-html, body {height: 100%; min-height: 100%; overflow:hidden; }
-.clear { clear: both;}
+	html, body {height: 100%; min-height: 100%; overflow:hidden; }
+	.clear { clear: both;}
+	#wrapper_content { float:left; height:100%; }
+	
+/* -- /other -- */	
 
-#wrapper_content { float:left; height:100%; }
-
+/* -- 1 header -- */
 #header{ height: 60px; line-height: 60px; background:#ffffff;  }
+	
+	/* -- 1.1 header logo -- */
 	#logo { float:left; width: 250px; height: 60px; background:#22262E; color: #fff;  }
 		.logotipo { float: left; display: block; height:60px; width: 180px; background: url('../img/logo.png') no-repeat; background-position:center;}
 		#logo ul { float: left; width: 70px; }
 			#logo ul li { float: left; list-style-type: none; width: 35px; height: 60px; }
 				#logo ul li a { line-height: 60px;}
+	/* -- /header logo -- */
 	
+	/* -- 1.2 header barra -- */
 	#header_menu_left  li { float:left; list-style-type: none; line-height: 60px; }
 	#header_menu_rigth  li { float: right; list-style-type: none; line-height: 60px; }
 		#showchat { display:table-cell; width: 30px;  height: 30px; background: url('../img/chat_ic.png');  }
 		#hidechat { display:table-cell; width: 30px;  height: 30px; background: url('../img/menu_ic.png');  }
+	/* -- fim header barra -- */
+	
+/* -- /do header -- */
 
+/* -- 2 content -- */
 #contentwrapper{ float:left; height: 100%; width: 100%; overflow: hidden; }
-	#menuleft { background: #1B1E24; width: 250px; float: left; height: 100%; }
+	
+	/* -- 2.1 menu esq -- */
+	#menuleft { background: #1B1E24; width: 250px; float: left; height: 100%; color:#fff; }
+		/* First Level UL List */
+		#accordion { list-style:none;}	
+			#accordion li { width:250px;  }
+				#accordion li a {display: block; width: 250px; height: 40px; color: #fff; line-height:40px; text-decoration:none;}				
+			
+		/* Second Level UL List*/
+		#accordion ul {background:#22262f;width:250px;display:none;}
+			#accordion ul li {height:30px;}
+				#accordion ul li a {width:250px;height:30px;line-height: 30px;margin-left:15px;text-decoration:none;}
+
+	/* -- /menu esq -- */
+	
+	/* -- 2.2 conteudo -- */
 	#content { background: #E5E9EC; float: left; height: 100%;}
+	/* -- /conteudo -- */
+	
+/* -- /conteudo -- */
 
+/* -- 3 menu direito -- */
 #menurigth { float:right; width: 250px; background:#22262E; height:100%; }	
-
+/* -- /menu direito -- */
 
 /* media queries */
 @media screen and (max-width: 1045px) {
@@ -35,12 +74,3 @@ html, body {height: 100%; min-height: 100%; overflow:hidden; }
 	
 	
 }
-	
-/* media queries */
-@media screen and (max-width: 777px) {
-
-	#logo { display: none;}
-	#menuleft { width: 70px; }
-	
-	
-}	

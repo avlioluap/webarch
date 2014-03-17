@@ -51,7 +51,9 @@
 		</div>
 		
 		<div id="contentwrapper">
-			<div id="menuleft">links</div>
+			<div id="menuleft">
+				<?php include ('app/menu_left/menu.php'); ?>
+			</div>
 			<div id="content">conteudo</div>
 		</div>
 		
@@ -63,7 +65,38 @@
 	1
 	</div>
 
-					
+	<script>
+$(document).ready(function () {
+		
+	$('#accordion a.item').click(function () {
+
+		/* FIRST SECTION */
+	
+		//slideup or hide all the Submenu
+		$('#accordion li').children('ul').slideUp('fast');	
+		
+		//remove all the "Over" class, so that the arrow reset to default
+		$('#accordion a.item').each(function () {
+			if ($(this).attr('rel')!='') {
+				$(this).removeClass($(this).attr('rel') + 'Over');	
+			}
+		});
+		
+		/* SECOND SECTION */		
+		
+		//show the selected submenu
+		$(this).siblings('ul').slideDown('fast');
+		
+		//add "Over" class, so that the arrow pointing down
+		$(this).addClass($(this).attr('rel') + 'Over');			
+	
+		return false;
+
+	});
+
+	
+});
+	</script>	
 	
 </body>
 	

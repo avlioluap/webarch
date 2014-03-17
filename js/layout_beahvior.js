@@ -1,9 +1,9 @@
 	function mySetupFunction() {
 		
-		var remaining_width = parseInt($(window).width());
-		var one = $('#wrapper_content').width();
-		var two = $('#menurigth').width();
-		var three = $('#menuleft').width();	
+		var remaining_width = parseInt($(window).width()),
+			one = $('#wrapper_content').width(),
+			two = $('#menurigth').width(),
+			three = $('#menuleft').width();	
 		
 		$('#menurigth').hide();
 		$('#menuleft').show();
@@ -25,10 +25,10 @@
 		
 		$(document).on('click', 'a#showchat', function () {
 		
-		var remaining_width = parseInt($(window).width());
-		var one = $('#wrapper_content').width();
-		var two = $('#menurigth').width();
-		var three = $('#menuleft').width();	
+		var remaining_width = parseInt($(window).width()),
+			one = $('#wrapper_content').width(),
+			two = $('#menurigth').width(),
+			three = $('#menuleft').width();	
 		
 			$('#menurigth').animate({ width: 'toggle' });
 			$('#menuleft').hide();
@@ -42,10 +42,10 @@
 
 		$(document).on('click', 'a#hidechat', function () {
 		
-		var remaining_width = parseInt($(window).width());
-		var one = $('#wrapper_content').width();
-		var two = $('#menurigth').width();
-		var three = $('#menuleft').width();			
+		var remaining_width = parseInt($(window).width()),
+			one = $('#wrapper_content').width(),
+			two = $('#menurigth').width(),
+			three = $('#menuleft').width();		
 		
 			$('#menurigth').animate({ width: 'toggle' });
 			$('#menuleft').animate({ width: 'toggle' });
